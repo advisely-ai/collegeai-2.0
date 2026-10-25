@@ -1,0 +1,20 @@
+.DS_Store
+.env*
+!.env.example
+
+# Python / backend
+backend/.venv/
+backend/**/__pycache__/
+backend/.pytest_cache/
+backend/.ruff_cache/
+backend/.vercel/
+
+# Node / frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/next-env.d.ts
+
+*.log
+.vercel
