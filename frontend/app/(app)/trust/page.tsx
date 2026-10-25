@@ -25,7 +25,6 @@ export default function TrustPage() {
   return (
     <section style={{ display: "grid", gap: 16 }}>
       <header>
-        <p className="muted" style={{ margin: 0 }}>You're in control</p>
         <h1 style={{ fontSize: 34 }}>Access & trust</h1>
       </header>
 
@@ -38,7 +37,7 @@ export default function TrustPage() {
             </span>
             <input
               type="checkbox"
-              style={{ width: 22, height: 22 }}
+              className="switch"
               checked={permissions?.[row.key] ?? false}
               disabled={row.locked || !permissions || update.isPending}
               onChange={(e) => update.mutate({ [row.key]: e.target.checked })}

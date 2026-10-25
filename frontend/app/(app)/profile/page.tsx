@@ -43,7 +43,6 @@ export default function ProfilePage() {
   return (
     <section style={{ display: "grid", gap: 16 }}>
       <header>
-        <p className="muted" style={{ margin: 0 }}>Your story</p>
         <h1 style={{ fontSize: 34 }}>Profile</h1>
       </header>
 
@@ -77,7 +76,7 @@ export default function ProfilePage() {
         )}
       </div>
 
-      <div className="card" style={{ opacity: 0.7 }}>
+      <div className="card muted">
         <strong>College list</strong>
         <p className="muted" style={{ margin: "6px 0 0" }}>Coming soon.</p>
       </div>
