@@ -113,7 +113,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <main className="app-shell" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+    <main className="app-shell narrow" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <header style={{ display: "flex", alignItems: "center", gap: 12 }}>
         <button
           className="chip"
@@ -137,7 +137,7 @@ export default function OnboardingPage() {
 
       {step === "welcome" && (
         <section style={{ display: "grid", gap: 14, paddingTop: 24 }}>
-          <p style={{ color: "var(--olive)", fontWeight: 700 }}>Welcome to CollegeAI</p>
+          
           <h1 style={{ fontSize: 40, lineHeight: 1.05 }}>Let's find the version of you that fits college.</h1>
           <p className="muted">
             Setup takes about two minutes. You decide what the app sees, and you can change it anytime.

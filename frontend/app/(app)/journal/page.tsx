@@ -33,7 +33,6 @@ export default function JournalPage() {
   return (
     <section style={{ display: "grid", gap: 16 }}>
       <header>
-        <p className="muted" style={{ margin: 0 }}>Private by default</p>
         <h1 style={{ fontSize: 34 }}>Reflect</h1>
       </header>
 

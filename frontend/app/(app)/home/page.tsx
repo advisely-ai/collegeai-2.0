@@ -18,10 +18,10 @@ export default function HomePage() {
   return (
     <section style={{ display: "grid", gap: 16 }}>
       <header>
-        <p className="muted" style={{ margin: 0 }}>Good to see you</p>
         <h1 style={{ fontSize: 34 }}>Your path, step by step</h1>
       </header>
 
+      <div className="cards">
       <div className="card" style={{ display: "grid", gap: 12 }}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <strong>Getting started</strong>
@@ -30,7 +30,7 @@ export default function HomePage() {
         <div className="progress"><span style={{ width: `${(doneCount / checks.length) * 100}%` }} /></div>
         {checks.map((c) => (
           <div key={c.label} style={{ display: "flex", gap: 10, alignItems: "center" }}>
-            <span aria-hidden>{c.done ? "✅" : "⬜"}</span>
+            <span className="check" data-done={c.done} aria-hidden />
             <span style={{ textDecoration: c.done ? "line-through" : "none" }}>{c.label}</span>
           </div>
         ))}
@@ -44,9 +44,10 @@ export default function HomePage() {
         <strong>Reflect</strong>
         <p className="muted" style={{ margin: "6px 0 0" }}>Private notes that feed your story. Only you see them.</p>
       </Link>
-      <div className="card" style={{ opacity: 0.7 }}>
+      <div className="card muted">
         <strong>College list</strong>
         <p className="muted" style={{ margin: "6px 0 0" }}>Coming soon.</p>
+      </div>
       </div>
     </section>
   );

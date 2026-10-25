@@ -10,7 +10,7 @@ const TABS = [
   { href: "/home", label: "Home", icon: "◎" },
   { href: "/discover", label: "Discover", icon: "✦" },
   { href: "/profile", label: "Profile", icon: "▣" },
-  { href: "/journal", label: "Journal", icon: "✎" },
+  { href: "/journal", label: "Reflect", icon: "✎" },
   { href: "/trust", label: "Trust", icon: "⛨" },
 ];
 
@@ -29,7 +29,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
   if (isError) {
     return (
-      <main className="app-shell">
+      <main className="app-shell narrow">
         <div className="card" style={{ display: "grid", gap: 10 }}>
           <h2>We couldn't reach your data</h2>
           <p className="muted" style={{ margin: 0 }}>{(error as Error).message}</p>
@@ -40,11 +40,25 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   }
 
   if (!profile || !profile.onboarded) {
-    return <main className="app-shell"><p className="muted">Loading…</p></main>;
+    return <main className="app-shell narrow"><p className="muted">Loading…</p></main>;
   }
 
   return (
-    <>
+    <div className="app-frame">
+      <aside className="sidebar" aria-label="Main">
+        <div className="sidebar-brand">CollegeAI</div>
+        {TABS.map((tab) => (
+          <Link
+            key={tab.href}
+            href={tab.href}
+            className="sidebar-link"
+            aria-current={pathname === tab.href ? "page" : undefined}
+          >
+            <span aria-hidden>{tab.icon}</span>
+            {tab.label}
+          </Link>
+        ))}
+      </aside>
       <main className="app-shell">{children}</main>
       <nav className="tabbar" aria-label="Main">
         {TABS.map((tab) => (
@@ -59,6 +73,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           </Link>
         ))}
       </nav>
-    </>
+    </div>
   );
 }

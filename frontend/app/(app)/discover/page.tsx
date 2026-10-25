@@ -2,7 +2,6 @@ export default function DiscoverPage() {
   return (
     <section style={{ display: "grid", gap: 16 }}>
       <header>
-        <p className="muted" style={{ margin: 0 }}>Step 1</p>
         <h1 style={{ fontSize: 34 }}>Discover yourself</h1>
       </header>
       <div className="card" style={{ display: "grid", gap: 10 }}>
