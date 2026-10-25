@@ -22,6 +22,7 @@ export default function HomePage() {
         <h1 style={{ fontSize: 34 }}>Your path, step by step</h1>
       </header>
 
+      <div className="cards">
       <div className="card" style={{ display: "grid", gap: 12 }}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <strong>Getting started</strong>
@@ -47,6 +48,7 @@ export default function HomePage() {
       <div className="card" style={{ opacity: 0.7 }}>
         <strong>College list</strong>
         <p className="muted" style={{ margin: "6px 0 0" }}>Coming soon.</p>
+      </div>
       </div>
     </section>
   );

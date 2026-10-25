@@ -113,7 +113,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <main className="app-shell" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+    <main className="app-shell narrow" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <header style={{ display: "flex", alignItems: "center", gap: 12 }}>
         <button
           className="chip"
