@@ -9,9 +9,6 @@ class Settings(BaseSettings):
 
     database_url: str = "postgresql+asyncpg://collegeai:collegeai@localhost:5432/collegeai"
     cors_origins: str = "http://localhost:3000"
-    # Creates tables on startup. Fine for local dev and first deploy; move to Alembic before
-    # real student data goes in.
-    auto_create_tables: bool = False
 
     @field_validator("database_url")
     @classmethod
